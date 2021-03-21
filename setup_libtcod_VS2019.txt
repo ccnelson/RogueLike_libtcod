@@ -1,0 +1,27 @@
+
+* download libtcod https://github.com/libtcod/libtcod/releases
+	( x64 for MS Visual C++: “libtcod-x.xx.x-x86_64-msvc.zip” )
+
+* create empty proj in VS2019
+
+* set debug environment to x64 (if applicable)
+
+* unzip the libtcod archive and place somewhere accessible
+
+* copy the following files from libtcod to the root of project (where .vcxproj is)
+	
+	libtcod.dll
+	libtcod.exp
+	libtcod.lib
+	libtcod.pdb
+	SDL2.dll
+	terminal.png
+
+* In VS2019, right click project solution and select 'properties'
+	Select 'all configurations'
+	Under 'VC++ Directories' > 'Include Directories' add libtcod's 'include' folder
+	Under 'Linker' > 'Input' > 'Additional Dependencies' add 'libtcod.lib;' to the start
+	of the list.
+
+
+	
